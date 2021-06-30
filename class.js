@@ -3,7 +3,7 @@
 // class: template
 // object: instance of a class
 // JavaScript classes
-//  - introduced in ES6
+//  - introduced in ES6 새로추가된지 얼마 안 됐음.
 //  - syntactical sugar over prototype-based inheritance
 
 // 1. Class declarations
@@ -96,6 +96,8 @@ class Shape {
     }
 }
 
+
+//상속
 class Rectangle extends Shape {}
 class Triangle extends Shape {
     draw() {
@@ -119,11 +121,13 @@ triangle.draw();
 console.log(triangle.getArea());
 
 // 6. Class checking: instanceOf
+
+//인스턴스인지 아닌지
 console.log(rectangle instanceof Rectangle);
 console.log(triangle instanceof Rectangle);
 console.log(triangle instanceof Triangle);
 console.log(triangle instanceof Shape);
-console.log(triangle instanceof Object);
+console.log(triangle instanceof Object); //true 모든 오브젝트들은 Object를 상속한 것
 console.log(triangle.toString());
 
 let obj = { value: 5 };
