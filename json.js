@@ -53,4 +53,4 @@ rabbit.jump();
 // obj.jump(); //안됨!!
 
 console.log(rabbit.birthDate.getDate());
-console.log(obj.birthDate.getDate()); //그냥 쓸 경우,,,는 string으로 만든 것을 다시 parse한 것이기 때문에 안 됨..
+console.log(obj.birthDate.getDate()); //그냥 쓸 경우,,,는 string 으로 만든 것을 다시 parse한 것이기 때문에 안 됨..
