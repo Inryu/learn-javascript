@@ -1,4 +1,4 @@
-'use strinct';
+'use strict';
 
 
 
@@ -32,7 +32,19 @@ class UserStorage{
 
 
     }
+    // 🌭 HW!! async await으로 만들어보기
+    async getUserWithRole(user, password){
+        const id=await this.loninUser(user, password);
+        const role=await this.getRoles(id);
+        return role;
+
+    }
 }
+
+
+
+
+
 
 //1. 사용자에게 id, pw 받아옴
 //2. login
@@ -43,11 +55,15 @@ const userStorage=new UserStorage();
 const id=prompt('enter your id');
 const password= prompt('enter your password');
 
-
-
 userStorage
     .loninUser(id, password)
     .then(user=>userStorage.getRoles(user))
     .then(user=>alert(`Hello ${user.name}, you have a ${user.role} role`))
     .catch(console.log);
 
+
+// 🌭 HW!! async await으로 만들어보기
+userStorage
+    .getUserWithRole(id,password)
+    .catch(console.log)
+    .then(console.log)
